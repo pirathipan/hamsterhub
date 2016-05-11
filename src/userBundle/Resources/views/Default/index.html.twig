@@ -1,0 +1,53 @@
+
+    <!DOCTYPE html>
+    <html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Hamster Hub{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/favicon.ico') }}" />
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('assets/css/reset.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/sign.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
+    {% endblock %}
+    <script src="{{ asset('assets/js/jquery-2.2.3.min.js') }}"></script>
+    <script src="{{ asset('assets/js/modalScript.js') }}"></script>
+    <script src="{{ asset('assets/js/signAjax.js') }}"></script>
+    <script src="{{ asset('assets/js/hamburgerMenu.js') }}"></script>
+</head>
+
+    <header class="header">
+    <span class="hamburgerMenu hamburgerMenuNoneActive">
+
+    </span>
+        <div class="subMenuHamburger">
+            {% if app.request.session.get("userId") is null %}
+                <button value="Sign In" name="signIn" class="button">
+                    Sign In
+                </button><br>
+                <button value="Sign Up" name="signUp" class="button">
+                    Sign Up
+                </button>
+                {% include 'userBundle:login:login.html.twig' %}
+                {% include 'userBundle:login:register.html.twig' %}
+            {% else %}
+                <p><a href="../profile">Profile</a></p>
+                <hr>
+                <p><a href="../myVideos">Mes Vidéos</a></p>
+                <hr>
+                <form name="logout" class="form" method="post" id="logout">
+                    <input type="submit" class="button" value="Logout">
+                </form>
+            {% endif %}
+        </div>
+
+    </header>
+
+<body>
+<main role="main">
+    <div class="loader"></div>
+    <!--undefined variable si rien dans la base de données-->
+</main>
+</body>
+</html>

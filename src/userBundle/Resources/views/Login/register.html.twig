@@ -1,0 +1,30 @@
+{% block signUp %}
+    <div class="">
+        <div class="modal">
+            <form name="login" class="form" method="POST" id="login" enctype="multipart/form-data">
+                <fieldset class="">
+                    <p class="title"> Register </p>
+                    <label  for="name">Name</label><br>
+                    <input type="text" id="name" name="name"><br>
+
+                    <label  for="email">Email Address</label><br>
+                    <input type="email" id="email" name="email"><br>
+
+                    <label  for="birthDate">Birth Date</label><br>
+                    <input type="date" id="birthDate" name="birthDate"><br>
+
+                    <label  for="password">Password</label><br>
+                    <input type="password" id="password" name="password"><br>
+
+                    <label  for="passwordVerification">Password Verification</label><br>
+                    <input type="password" id="passwordVerification" name="passwordVerification"><br>
+
+                    <input type="submit" class="button" value="Register">
+                    <p class="text-info">Need an account? <a href="#">register</a></p>
+                    <p class="forgotPassword"><a href="#">Forgot your password ?</a></p>
+                </fieldset>
+            </form>
+            <div class="close"></div>
+        </div>
+    </div>
+{% endblock %}

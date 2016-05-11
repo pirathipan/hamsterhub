@@ -1,0 +1,36 @@
+services:
+    login:
+        class: UserBundle\Services\login
+        arguments: []
+    register:
+        class: UserBundle\Services\register
+        arguments: []
+    Profile:
+        class: UserBundle\Services\Profile
+    addVideo:
+        class: UserBundle\Services\AddVideo
+        arguments: []
+    editVideo:
+        class: UserBundle\Services\EditVideo
+        arguments: []
+    deleteVideo:
+        class: UserBundle\Services\DeleteVideo
+        arguments: []
+    homeVideo:
+        class: UserBundle\Services\HomeVideo
+        arguments: []
+    login:
+        class: UserBundle\Services\ligin
+        arguments: []
+    register:
+        class: UserBundle\Services\register
+        arguments: []
+    profile:
+        class: UserBundle\Services\Profile
+        arguments: []
+    addComment:
+        class: UserBundle\Services\AddComment
+        arguments: []
+    deleteComment:
+        class: UserBundle\Services\DeleteComment
+        arguments: []
